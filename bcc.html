@@ -13,10 +13,52 @@
         </div>
         <div class="row justify-content-md-center" style = "padding: 5%; justify-content: center;">
             <div class="col-sm text-center">
-                <button type="button" class="btn btn-danger"onclick="reset()">Reset</button>
+                <form action="">
+                    <select name="backdrop" id="backdrop" onchange="bcc(this)" style="border: 3px solid black; justify-content: center;">
+                        <option value="normal">Reset</option>
+                        <option value="random">Random</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="blue">Blue</option>
+                        <option value="light">White</option>
+                        <option value="dark">Dark Grey</option>
+                    </select>
+                </form>
             </div>
             <div class="col-sm text-center">
-                <button type="button" class="btn btn-info" onclick="location.href='index.html';">Go to games Menu</button>
+                <button type="button" class="btn btn-danger"onclick="reset()"style="border: 3px solid black;">Reset</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-info" onclick="location.href='index.html';"style="border: 3px solid black;">Go to games Menu</button>
+            </div>
+        </div>
+        <div class="row" style = "border: 3px solid white; justify-content: center;">
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-primary" style = "margin: 20px;">Wee!!!</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-secondary" style = "margin: 20px;">Woo!!!</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-warning" style = "margin: 20px;">Boo!!!</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-success" style = "margin: 20px;">Go!!!</button>
+            </div>
+        </div>
+        <div class="row" style = "border: 3px solid white; justify-content: center; margin-top: 40px;">
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-dark" style = "margin: 20px;">Wee!!!</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-info" style = "margin: 20px;">Woo!!!</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-danger" style = "margin: 20px;">Boo!!!</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-light" style = "margin: 20px;">Go!!!</button>
             </div>
         </div>
     </div>
