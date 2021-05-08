@@ -4,8 +4,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Jack</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Black Jack</h1>
+<body style="background-image: url('static/images/background/bj.jpeg'); background-position: center center;background-attachment: fixed;background-repeat: no-repeat;">
+    <div class="container" style = "padding: 3%">
+        <div class="row" style = "border: 3px solid white; justify-content: center;">
+            <h1 style="color:white; text-align:center;">Black Jack</h1>
+        </div>
+        <div class="row" style = "justify-content: center;margin-top: 30px;">
+            <div class="col-sm text-center">
+                <h1 id = "player_score"style="color:white; text-align:center;">Your Score: 0</h1>
+            </div>
+            <div class="col-sm text-center">
+                <h1 id = "dealer_score" style="color:white; text-align:center;">Dealer's Score: 0</h1>
+            </div>
+        </div>
+        <div class="row" id="bjtable" style = "border: 3px solid white; justify-content: center; margin-top: 30px; height: 200px">
+            <h1 id="rh" style="color:white; text-align:center;margin-top: 100px;">Press 'Hit' to start </h1>
+        </div>
+        <div class="row" style = "border: 3px solid white; justify-content: center;margin-top: 30px;">
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-primary" onclick="hit()" style = "margin: 20px;">Hit</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-danger" onclick="stand()" style = "margin: 20px;">Stand</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-warning" onclick="deal()" style = "margin: 20px;">Deal Next Round</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-dark" onclick="reset()" style = "margin: 20px;">Reset</button>
+            </div>
+            <div class="col-sm text-center">
+                <button type="button" class="btn btn-light" onclick="location.href='index.html';" style = "margin: 20px;">Games Menu</button>
+            </div>
+        </div>
+        <table class="table table-hover table-bordered text-center" style=" justify-content: center;margin-top: 20px; border: 3px solid white; background: green">
+            <thead>
+              <tr>
+                
+                <th  scope="col" style="color:white; text-align:center;">Wins</th>
+                <th  scope="col" style="color:white; text-align:center;">Losses</th>
+                <th  scope="col" style="color:white; text-align:center;">Draws</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id = "win" style="color:white; text-align:center;">0</th>
+                <td id = "loss" style="color:white; text-align:center;"> 0</td>
+                <td id = "draw" style="color:white; text-align:center;">0</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- JavaScript Files-->
+    <script src="static/js/bj.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
