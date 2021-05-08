@@ -126,12 +126,15 @@ function update_score(number,player){
     }
     document.getElementById(player.htmlScoreId).innerHTML = player.htmlInner +player.score;
 }
-
-function stand(){
+function sleep(){
+    return new Promise(resolve => setTimeout(resolve, 500));
+}
+async function stand(){
     stand_status = true;
     document.getElementById('back_card').remove();
     while((active_player.dealer.score<=17 && active_player.dealer.score<active_player.you.score)||count==4){
         addcard(active_player.dealer);
+        await sleep();
     }
 
     table_update();
